@@ -8,7 +8,7 @@ Index
 ----------------------
 * [Configuring](#configuring)
 * [Simple example](#simple-example)
-* [Roadmao](#roadmap)
+* [Roadmap](#roadmap)
 * [License](#license)
 
 
