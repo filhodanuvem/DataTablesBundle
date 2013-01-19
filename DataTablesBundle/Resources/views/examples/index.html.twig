@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}DataTables Bundle{% endblock %}</title>
+    <link rel="icon" sizes="16x16" href="{{ asset('favicon.ico') }}" />
+    {% javascripts
+        '@SaturnoDataTablesBundle/Resources/public/js/jquery.min.js'
+        '@SaturnoDataTablesBundle/Resources/public/js/jquery.dataTables.min.js'
+    %}
+    <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+    {% stylesheets 'bundles/saturnodatatables/css/*' filter='cssrewrite'
+        '@SaturnoDataTablesBundle/Resources/public/css/jquery.dataTables.css'
+    %}
+    <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
+</head>
+<body>
+{% block content %}
+{% endblock  %}
+</body>
+</html>

@@ -1,0 +1,14 @@
+services:
+    saturno_datatables_factory:
+        class: Saturno\DataTablesBundle\Manager\TableFactory
+        arguments: [@twig, @kernel]
+    saturno_table_request:
+        class: Saturno\DataTablesBundle\HTTP\Request
+        arguments: [@request]
+        public: true
+        scope: request
+    filter_render:
+        class: Saturno\DataTablesBundle\Twig\TableExtension
+        arguments: [@twig]
+        tags:
+          - {name: twig.extension}

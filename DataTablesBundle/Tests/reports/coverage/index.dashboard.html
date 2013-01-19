@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="jquery.min.js" type="text/javascript"></script>
+    <script src="highcharts.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+          var classCoverageDistribution = new Highcharts.Chart({
+             chart: {
+                renderTo: 'classCoverageDistribution',
+                type: 'column'
+             },
+             title: {text: ''},
+             legend: {enabled: false},
+             credits: {enabled: false},
+             tooltip: {enabled: false},
+             xAxis: {
+                 labels: {style: {fontSize: '8px'}},
+                 categories: [
+                 '0%','0-10%','10-20%','20-30%','30-40%','40-50%','50-60%','60-70%','70-80%','80-90%','90-100%','100%'
+                 ]
+            },
+            yAxis: {
+                title: '',
+                labels: {style: {fontSize: '8px'}},
+            },
+            series: [{
+                data: [4,6,3,1,2,2,3,0,2,0,0,7]
+            }],
+          });
+
+        var classComplexity = new Highcharts.Chart({
+            chart: {
+              renderTo: 'classComplexity',
+              type: 'scatter'
+            },
+            title: {text: ''},
+            legend: {enabled: false},
+            credits: {enabled: false},
+            xAxis: {
+               labels: {enabled: false},
+            },
+            yAxis: {
+              title: '',
+              labels: {enabled: false},
+            },
+            tooltip: {
+                formatter: function() {
+                    return this.point.config[2];
+                }
+            },
+            series: [{
+              data: [[100,7,"<a href=\"src_Saturno_Bridge_Table_GridResponse.php.html#16\">GridResponse<\/a>"],[100,10,"<a href=\"src_Saturno_DataTablesBundle_Element_Body.php.html#14\">Body<\/a>"],[100,5,"<a href=\"src_Saturno_DataTablesBundle_Element_Column.php.html#13\">Column<\/a>"],[100,17,"<a href=\"src_Saturno_DataTablesBundle_Element_Table.php.html#19\">Table<\/a>"],[4.2643923240938,206,"<a href=\"vendor_symfony_symfony_src_Symfony_Component_HttpFoundation_Request.php.html#31\">Request<\/a>"],[9.7872340425532,135,"<a href=\"vendor_symfony_symfony_src_Symfony_Component_HttpFoundation_Response.php.html#21\">Response<\/a>"],[70,7,"<a href=\"src_Saturno_DataTablesBundle_Manager_TableFactory.php.html#11\">TableFactory<\/a>"],[53.846153846154,7,"<a href=\"src_Saturno_DataTablesBundle_Tests_Fixtures_InvalidProduct.php.html#14\">InvalidProduct<\/a>"],[100,1,"<a href=\"src_Saturno_DataTablesBundle_Tests_Fixtures_InvalidProductTable.php.html#13\">InvalidProductTable<\/a>"],[53.846153846154,7,"<a href=\"src_Saturno_DataTablesBundle_Tests_Fixtures_Product.php.html#14\">Product<\/a>"],[100,1,"<a href=\"src_Saturno_DataTablesBundle_Tests_Fixtures_ProductTable.php.html#14\">ProductTable<\/a>"],[53.846153846154,7,"<a href=\"src_Saturno_DataTablesBundle_Tests_Fixtures_User.php.html#14\">User<\/a>"],[100,1,"<a href=\"src_Saturno_DataTablesBundle_Tests_Fixtures_UserTable.php.html#14\">UserTable<\/a>"],[34.666666666667,30,"<a href=\"vendor_composer_ClassLoader.php.html#43\">ClassLoader<\/a>"],[0,6,"<a href=\"vendor_composer_autoload_real.php.html#5\">ComposerAutoloaderInitfc1e645d7e06faf5047477b26c82e0e2<\/a>"],[10,9,"<a href=\"vendor_swiftmailer_swiftmailer_lib_classes_Swift.php.html#18\">Swift<\/a>"],[16.666666666667,19,"<a href=\"vendor_symfony_symfony_src_Symfony_Component_HttpFoundation_FileBag.php.html#24\">FileBag<\/a>"],[29.06976744186,44,"<a href=\"vendor_symfony_symfony_src_Symfony_Component_HttpFoundation_HeaderBag.php.html#21\">HeaderBag<\/a>"],[42.307692307692,13,"<a href=\"vendor_symfony_symfony_src_Symfony_Component_HttpFoundation_JsonResponse.php.html#19\">JsonResponse<\/a>"],[5.4545454545455,33,"<a href=\"vendor_symfony_symfony_src_Symfony_Component_HttpFoundation_ParameterBag.php.html#21\">ParameterBag<\/a>"],[16.867469879518,44,"<a href=\"vendor_symfony_symfony_src_Symfony_Component_HttpFoundation_ResponseHeaderBag.php.html#21\">ResponseHeaderBag<\/a>"],[34.48275862069,12,"<a href=\"vendor_symfony_symfony_src_Symfony_Component_HttpFoundation_ServerBag.php.html#21\">ServerBag<\/a>"],[4.1666666666667,101,"<a href=\"vendor_symfony_symfony_src_Symfony_Component_HttpKernel_Kernel.php.html#47\">Kernel<\/a>"],[8.0310880829016,184,"<a href=\"vendor_twig_twig_lib_Twig_Environment.php.html#18\">Twig_Environment<\/a>"],[0,8,"<a href=\"vendor_twig_twig_lib_Twig_Extension.php.html#11\">Twig_Extension<\/a>"],[0.74074074074074,25,"<a href=\"vendor_twig_twig_lib_Twig_Extension_Core.php.html#15\">Twig_Extension_Core<\/a>"],[40,10,"<a href=\"vendor_twig_twig_lib_Twig_Extension_Escaper.php.html#11\">Twig_Extension_Escaper<\/a>"],[75,3,"<a href=\"vendor_twig_twig_lib_Twig_Extension_Optimizer.php.html#11\">Twig_Extension_Optimizer<\/a>"],[0,13,"<a href=\"vendor_twig_twig_lib_Twig_Extension_Staging.php.html#20\">Twig_Extension_Staging<\/a>"],[0,15,"<a href=\"vendor_twig_twig_lib_Twig_TokenStream.php.html#19\">Twig_TokenStream<\/a>"]],
+              marker: {
+                  symbol: 'diamond'
+              }
+            }],
+        });
+    });
+    </script>
+  </head>
+
+  <body>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr><td class="title"></td></tr>
+      <tr><td><div align="center"><p><a href="index.html">Back to Code Coverage report</a></p></div></td></tr>
+      <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""></td></tr>
+    </table>
+
+    <br />
+
+    <center>
+      <table width="90%" cellpadding="2" cellspacing="1" border="0">
+        <tr>
+          <td valign="top">
+            <h2>Class Coverage Distribution</h2>
+            <div id="classCoverageDistribution"></div>
+          </td>
+
+          <td valign="top">
+            <h2>Class Complexity</h2>
+            <div id="classComplexity"></div>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">
+            <h2>Top Project Risks</h2>
+            <ul>
+              <li><a href="vendor_symfony_symfony_src_Symfony_Component_HttpFoundation_Request.php.html#31">Request</a> (37441)</li>
+              <li><a href="vendor_twig_twig_lib_Twig_Environment.php.html#18">Twig_Environment</a> (26520)</li>
+              <li><a href="vendor_symfony_symfony_src_Symfony_Component_HttpFoundation_Response.php.html#21">Response</a> (13515)</li>
+              <li><a href="vendor_symfony_symfony_src_Symfony_Component_HttpKernel_Kernel.php.html#47">Kernel</a> (9079)</li>
+              <li><a href="vendor_symfony_symfony_src_Symfony_Component_HttpFoundation_ResponseHeaderBag.php.html#21">ResponseHeaderBag</a> (1156)</li>
+              <li><a href="vendor_symfony_symfony_src_Symfony_Component_HttpFoundation_ParameterBag.php.html#21">ParameterBag</a> (953)</li>
+              <li><a href="vendor_symfony_symfony_src_Symfony_Component_HttpFoundation_HeaderBag.php.html#21">HeaderBag</a> (734)</li>
+              <li><a href="vendor_twig_twig_lib_Twig_Extension_Core.php.html#15">Twig_Extension_Core</a> (636)</li>
+              <li><a href="vendor_composer_ClassLoader.php.html#43">ClassLoader</a> (280)</li>
+              <li><a href="vendor_twig_twig_lib_Twig_TokenStream.php.html#19">Twig_TokenStream</a> (240)</li>
+
+            </ul>
+          </td>
+
+          <td valign="top">
+            <h2>Least Tested Methods</h2>
+            <ul>
+              <li><a href="vendor_twig_twig_lib_Twig_Environment.php.html#168">Twig_Environment::enableAutoReload</a> (0%)</li>
+              <li><a href="vendor_twig_twig_lib_Twig_Environment.php.html#160">Twig_Environment::isDebug</a> (0%)</li>
+              <li><a href="vendor_twig_twig_lib_Twig_Environment.php.html#150">Twig_Environment::disableDebug</a> (0%)</li>
+              <li><a href="vendor_twig_twig_lib_Twig_Environment.php.html#142">Twig_Environment::enableDebug</a> (0%)</li>
+              <li><a href="vendor_twig_twig_lib_Twig_Environment.php.html#176">Twig_Environment::disableAutoReload</a> (0%)</li>
+              <li><a href="vendor_twig_twig_lib_Twig_Environment.php.html#186">Twig_Environment::isAutoReload</a> (0%)</li>
+              <li><a href="vendor_twig_twig_lib_Twig_Environment.php.html#212">Twig_Environment::isStrictVariables</a> (0%)</li>
+              <li><a href="vendor_twig_twig_lib_Twig_Environment.php.html#202">Twig_Environment::disableStrictVariables</a> (0%)</li>
+              <li><a href="vendor_twig_twig_lib_Twig_Environment.php.html#194">Twig_Environment::enableStrictVariables</a> (0%)</li>
+              <li><a href="vendor_twig_twig_lib_Twig_Environment.php.html#134">Twig_Environment::setBaseTemplateClass</a> (0%)</li>
+
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </center>
+
+    <br />
+
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""></td></tr>
+      <tr><td class="versionInfo">Generated by <a href="http://github.com/sebastianbergmann/php-code-coverage" target="_top">PHP_CodeCoverage 1.1.2</a> using <a href="http://www.php.net/" target="_top">PHP 5.4.6-1ubuntu1.1</a> and PHPUnit 3.6.10 at Sat Jan 19 1:04:30 BRST 2013.</td></tr>
+    </table>
+
+    <br/>
+  </body>
+</html>

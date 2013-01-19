@@ -1,0 +1,22 @@
+<script type='text/javascript'>
+    var oTable{{ name | capitalize }} = $('#table{{ name | capitalize }}').dataTable({
+
+    {% if config.url is defined and config.url %}
+        "bProcessing": false,
+        "bServerSide": true,
+        "sAjaxSource": "{{ path(config.url) }}",
+        "sServerMethod" : "POST",
+
+    {% endif %}
+        "bFilter" : false,
+        "sPaginationType" : "full_numbers",
+        "fnServerParams": function ( aoData ) {
+            // Campos para exibição
+            {% for field,name in columns %}
+            aoData.push({
+                "name": "aCampo_{{ loop.index-1 }}", "value": "{{ field }}"
+            });
+            {% endfor %}
+        }
+    });
+</script>

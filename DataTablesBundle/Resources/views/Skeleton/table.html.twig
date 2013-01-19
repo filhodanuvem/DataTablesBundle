@@ -1,0 +1,22 @@
+<table  id='table{{ name | capitalize  }}' class='table'>
+    <thead>
+    <tr>
+        {% for name in columns %}
+            <th {{ block('config') }}  >{{ name }}</th>
+        {% endfor %}
+    </tr>
+    </thead>
+    <tbody>
+        {% for row in body.rows %}
+            <tr>
+            {% for value in row %}
+                <th>{{ value }}</th>
+            {% endfor %}
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% block config %}
+
+{% endblock %}
