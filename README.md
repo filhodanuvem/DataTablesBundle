@@ -1,4 +1,4 @@
-DataTablesBundle
+Saturno\DataTablesBundle
 ==========================================
 
 DataTablesBundle is a symfony package to create and manage (of easy way) tables using datatables jquery plugin and (mainly doctrine's) entities. 
