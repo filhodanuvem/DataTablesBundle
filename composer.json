@@ -1,0 +1,30 @@
+{
+    "name": "Saturno/DataTablesBundle",
+    "version": "0.1",
+    "type": "library",
+    "description": "A symfony package to create and manage (of easy way) tables using datatables jquery plugin and (mainly doctrine's) entities.",
+    "keywords": ["datatables", "grid", "filter"],
+    "homepage": "https://github.com/cloudson/DataTablesBundle",
+    "license" : "GPL",
+    "authors" : [
+        {
+            "name": "Claudson Oliveira",
+            "email": "claudsonweb@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "doctrine/orm": ">=2.2.3,<2.4-dev",
+        "doctrine/doctrine-bundle": "1.1.*",
+        "twig/extensions": "1.0.*@dev",
+        "symfony/assetic-bundle": "2.1.*"
+    },
+    "require-dev": {
+        
+    },
+    "autoload": {
+        "psr-0": {
+            "DataTablesBundle": "./"
+        }
+    }
+}
