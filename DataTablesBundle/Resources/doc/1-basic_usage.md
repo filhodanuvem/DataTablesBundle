@@ -37,11 +37,23 @@ class User
 // this is the DataTable class
 Class UserTable extends \Saturno\DataTablesBundle\Element\Table
 {
-    public function configure()
+    public function build()
     {
         $this->hasColumn('id','Code')
             ->hasColumn('name','Name' )
             ->hasColumn('date','Birthday');
+    }
+
+    public function getName()
+    {
+        return 'acme_demo_datatables_user';
+    }
+
+    public function getDefaultOptions()
+    {
+        return array(
+            //
+        );
     }
 }
 ```
