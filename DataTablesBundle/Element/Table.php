@@ -30,7 +30,6 @@ abstract class Table implements \Saturno\Bridge\Table\Table
 
     protected $settings;
 
-    public abstract function configure();
 
     public function __construct(\Twig_Environment $template)
     {
@@ -47,7 +46,7 @@ abstract class Table implements \Saturno\Bridge\Table\Table
 
             )
         );
-        $this->configure();
+        $this->build();
     }
 
     /**
@@ -130,7 +129,7 @@ abstract class Table implements \Saturno\Bridge\Table\Table
     /**
      * @return mixed
      */
-    private function getName()
+    public function getName()
     {
         $reflect = new \ReflectionClass($this);
         return str_replace('Table','',$reflect->getShortName());
@@ -141,12 +140,8 @@ abstract class Table implements \Saturno\Bridge\Table\Table
      */
     private function getSettings()
     {
+        $this->settings['config'] = array_merge($this->settings['config'], $this->getDefaultOptions());
         return $this->settings;
-    }
-
-    public function setSettings(Array $settings)
-    {
-        $this->settings['config'] = array_merge($this->settings['config'], $settings);
     }
 
     /**
