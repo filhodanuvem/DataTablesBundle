@@ -13,10 +13,22 @@ namespace Saturno\DataTablesBundle\Tests\Fixtures;
 
 Class UserTable extends \Saturno\DataTablesBundle\Element\Table
 {
-    public function configure()
+    public function build()
     {
         $this->hasColumn('id','Code')
             ->hasColumn('name','Name' )
             ->hasColumn('date','Birthday');
+    }
+
+    public function getDefaultOptions()
+    {
+    	return array(
+            
+    	);
+    }
+
+    public function getName()
+    {
+    	return 'datatables_user';
     }
 }

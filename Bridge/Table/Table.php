@@ -27,4 +27,10 @@ interface Table
     public function getBody();
 
     public function getColumnName($index);
+
+    public function build();
+
+    public function getName();
+
+    public function getDefaultOptions();
 }

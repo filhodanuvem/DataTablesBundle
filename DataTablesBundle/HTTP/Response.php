@@ -26,11 +26,12 @@ class Response extends \Saturno\Bridge\Table\GridResponse
      * @param \Saturno\Bridge\Table\Table $table
      * @param array $data
      */
-    public function __construct(Table $table, Array $data = array())
+    public function __construct(Table &$table, Array $data = array())
     {
         $this->counterRequests();
         $this->dataGrid = array_merge($this->dataGrid, $data);
         parent::__construct($table, $this->dataGrid);
+        $this->updateDataGrid();
     }
 
 

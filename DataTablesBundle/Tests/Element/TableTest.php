@@ -24,7 +24,7 @@ class TableTest extends \PHPUnit_Framework_testCase
         $method = $reflect->getMethod('getName');
         $method->setAccessible(true);
 
-        $expected = 'User';
+        $expected = 'datatables_user';
 
         $this->assertEquals($expected, $method->invoke($table));
     }
@@ -143,8 +143,7 @@ class TableTest extends \PHPUnit_Framework_testCase
         );
 
         $template = $this->getMock('\Twig_Environment');
-        $table = new \Saturno\DataTablesBundle\Tests\Fixtures\UserTable($template);
-        $table->setSettings($extra);
+        $table = new \Saturno\DataTablesBundle\Tests\Fixtures\UserOptionsTable($template);
         $reflect = new \ReflectionClass($table);
         $method = $reflect->getMethod('getSettings');
         $method->setAccessible(true);

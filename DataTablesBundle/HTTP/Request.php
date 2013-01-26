@@ -52,7 +52,7 @@ class Request implements \Saturno\Bridge\Table\GridRequest
     }
 
 
-    public function format(Table $table)
+    public function format(Table &$table)
     {
         $this->table = $table;
         $this->generateVariables($this->request);
@@ -79,15 +79,15 @@ class Request implements \Saturno\Bridge\Table\GridRequest
             return array('offset', $value);
         }
 
-        if ($key == 'sSortDir_0' && $value) {
+        if ($key == 'sSortDir_0' && !is_null($value)) {
             return array('orderDir',$value);
         }
 
-        if ($key == 'sSearch' && $value) {
+        if ($key == 'sSearch' && !is_null($value)) {
             return array('like', $value);
         }
 
-        if ($key == 'iSortCol_0' && $value) {
+        if ($key == 'iSortCol_0' && !is_null($value)) {
             return array(
                 'orderBy',
                 $this->table->getColumnName($value),

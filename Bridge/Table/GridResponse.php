@@ -17,7 +17,7 @@ abstract class GridResponse extends \Symfony\Component\HttpFoundation\JsonRespon
 {
     protected $table;
 
-    public function __construct(Table $table, Array &$data = array())
+    public function __construct(Table &$table, Array &$data = array())
     {
         $this->table = $table;
         parent::__construct($data);

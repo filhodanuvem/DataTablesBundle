@@ -43,9 +43,7 @@ class RequestTest extends  \PHPUnit_Framework_TestCase
 
         $gridRequest = new \Saturno\DataTablesBundle\HTTP\Request($request);
         $gridRequest->format($table);
-        $formatMethod = $this->getMethodFormatAsPublic();
-        $formatMethod->invoke($gridRequest, $table);
-
+        
         // test
         $this->assertEquals($expected, $gridRequest->all());
     }
