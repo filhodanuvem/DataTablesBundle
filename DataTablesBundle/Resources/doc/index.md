@@ -23,6 +23,6 @@ Call the javascript plugins and styles in the twig template
 Usage guide
 -----------------------------------
 * [Basic usage](./1-basic_usage.md)
-* [Simple example](./2-entity_with_aggregate.md)
+* [Entity with a aggregate](./2-entity_with_aggregate.md)
 * [Using Ajax](./3-using_ajax.md)
 * [Roadmap](./roadmap.md)
